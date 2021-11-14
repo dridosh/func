@@ -1,5 +1,7 @@
 <?php
- $path ='https://i.yapx.ru/';
+declare(strict_types=1);
+
+$path ='https://i.yapx.ru/';
 ?>
 
 <!doctype html>
@@ -16,7 +18,8 @@
 
 
 <?php
-require 'functions.php';
+
+require_once 'functions.php';
 
 //1. Напишите функцию, возвращающую дескриптор <img /> разметки HTML-страницы. Эта функция должна
 //принимать URL изображения в качестве обязательного аргумента, а также текст надписи, ширину и высоту
@@ -32,7 +35,6 @@ echo get_img('https://lh3.ggpht.com/KV-KPdiqPUxbHuNkba5T5XR9JfH673Hv9Gk6Lb42o8GQ
 echo get_img_descriptor('O8wWQ.jpg', 'picture', 400, 400);
 
 echo '<br>';
-
 
 //4. Что выводится на экран в приведенном ниже фрагменте кода?
 
@@ -52,22 +54,9 @@ while(($cost = restaurant_check($meal, $tax,$tip))
     print "I can afford a tip of $tip% ($cost)<br>";
 }
 
-
-
-
-
-
-
-
-
-
-
-
+echo get_hex_color(255,00,255);
 
 ?>
-
-
-
 
 
 </body>
