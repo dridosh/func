@@ -8,6 +8,6 @@ function get_img_descriptor ($url, $alt = 'picture', $height = '200', $width = '
 }
 
 function get_hex_color ($R, $G, $B) {
-    echo dechex($R) . dechex($G) . dechex($B);
+    echo '#'.dechex($R) . dechex($G) . dechex($B);
 }
 
