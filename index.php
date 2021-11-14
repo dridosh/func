@@ -16,7 +16,7 @@
 
 
 <?php
-require 'img_func.php';
+require 'functions.php';
 
 //1. Напишите функцию, возвращающую дескриптор <img /> разметки HTML-страницы. Эта функция должна
 //принимать URL изображения в качестве обязательного аргумента, а также текст надписи, ширину и высоту
@@ -29,10 +29,43 @@ function get_img ($url, $alt = ' ', $height = 100, $width = 100): string {
 }
 echo get_img('html_img_pic.jpg', 'picture', 200, 400);
 echo get_img('https://lh3.ggpht.com/KV-KPdiqPUxbHuNkba5T5XR9JfH673Hv9Gk6Lb42o8GQ4sPyneCszPl8Uw8rZUWrbl4', 'picture', 400, 400);
-
 echo get_img_descriptor('O8wWQ.jpg', 'picture', 400, 400);
 
+echo '<br>';
+
+
+//4. Что выводится на экран в приведенном ниже фрагменте кода?
+
+
+function restaurant_check($meal, $tax, $tip) {
+    $tax_amount = $meal * ($tax / 100);
+    $tip_amount = $meal * ($tip / 100);
+    return $meal + $tax_amount + $tip_amount;
+}
+$cash_on_hand = 31;
+$meal = 25;
+$tax = 10;
+$tip = 10;
+while(($cost = restaurant_check($meal, $tax,$tip))
+    < $cash_on_hand) {
+    $tip++;
+    print "I can afford a tip of $tip% ($cost)<br>";
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 ?>
+
 
 
 
